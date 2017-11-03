@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 14:31:42 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/17 15:00:19 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 14:02:56 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <xlocale.h>
+#include "libft.h"
 
 int		ft_tolower(int c)
 {

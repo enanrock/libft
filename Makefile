@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/03 13:55:21 by enanrock         ###   ########.fr        #
+#    Updated: 2017/11/03 14:18:21 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -265,6 +265,4 @@ where_is_malloc:
 	@echo ""
 	@echo "2     : ft_loopnew.c       (result & result->content)"
 	@echo "2     : ft_lstnew.c        (result & result->content)"
-	@echo "2 * N : ft_lstdupone.c     (N * ft_lstnew)"
-	@echo ""
-	@echo "? : ft_lstmap.c (https://cdn.intra.42.fr/pdf/pdf/652/libft.fr.pdf)"
+	@echo "2     : ft_lstdupone.c     (use ft_lstnew.c)"

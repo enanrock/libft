@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 14:31:42 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/17 14:55:35 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 14:03:17 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <xlocale.h>
+#include "libft.h"
 
 int		ft_toupper(int c)
 {

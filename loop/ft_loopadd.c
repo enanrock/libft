@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 14:45:20 by enanrock          #+#    #+#             */
-/*   Updated: 2017/09/25 14:32:48 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 14:03:37 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	ft_loopadd(t_loop **old_head, t_loop *new_head)

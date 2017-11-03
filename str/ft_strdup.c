@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/13 11:47:54 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/03 13:36:57 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 14:12:37 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	else
 	{
-		ft_strcpy(dest, src);
+		ft_strmove(dest, src);
 		return (dest);
 	}
 }

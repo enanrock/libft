@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 14:15:28 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/03 12:43:01 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 14:04:13 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_loopdelhead(t_loop **old_head, void (*del)(void *, size_t))
 {
