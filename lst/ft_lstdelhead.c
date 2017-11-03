@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 14:15:28 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/13 10:14:54 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:28:06 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstdelhead(t_list **old_head, void (*del)(void *, size_t))
 {

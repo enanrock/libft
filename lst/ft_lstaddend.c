@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/15 13:30:09 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/15 13:58:02 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:27:27 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	ft_lstaddend(t_list **alst, t_list *new)

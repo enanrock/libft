@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 18:27:43 by enanrock          #+#    #+#             */
-/*   Updated: 2017/01/23 13:40:26 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:40:27 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnchr(const char *s, int c, size_t len)
 {

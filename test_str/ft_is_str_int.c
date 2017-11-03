@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/14 11:02:37 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/14 11:36:11 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:43:16 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 int		ft_is_str_int(char *str)

@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 14:43:13 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/24 15:57:34 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:32:29 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)

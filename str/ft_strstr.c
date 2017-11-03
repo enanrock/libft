@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 12:25:35 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/17 11:58:45 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:42:33 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {

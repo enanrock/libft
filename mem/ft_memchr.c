@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 15:16:00 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/22 11:21:14 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:31:11 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

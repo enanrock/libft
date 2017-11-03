@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 15:39:56 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/02 20:37:28 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:39:01 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

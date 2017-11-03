@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/03 13:05:04 by enanrock         ###   ########.fr        #
+#    Updated: 2017/11/03 13:26:05 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -241,7 +241,6 @@ to_modif:
 where_is_malloc:
 	clear
 	@echo "By the way, please use ft_memdel(&ap); instead of free(ap);"
-	@echo "please test ft_sqrt_int"
 	@echo ""
 	@echo "1     : ft_memalloc.c      (result)"
 	@echo ""

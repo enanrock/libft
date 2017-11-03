@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 11:45:59 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/24 16:46:09 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:40:54 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strncpy(char *dest, char *src, size_t len)

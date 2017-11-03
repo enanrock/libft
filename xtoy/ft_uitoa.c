@@ -6,12 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 07:43:03 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/09 07:47:18 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:44:02 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char			*ft_uitoa(unsigned int n)

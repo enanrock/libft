@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 18:25:35 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/02 20:44:52 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:35:17 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static void		write_is_1_or_2(int c, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/10 12:10:05 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/02 19:59:52 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:29:47 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 unsigned int	ft_sqrt_uint(unsigned int ui)
 {

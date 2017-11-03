@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 14:04:22 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/25 17:47:37 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:41:01 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {

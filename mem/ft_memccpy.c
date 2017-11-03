@@ -6,11 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 12:41:50 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/27 18:53:44 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:30:57 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

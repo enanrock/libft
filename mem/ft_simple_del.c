@@ -6,12 +6,11 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 08:14:59 by enanrock          #+#    #+#             */
-/*   Updated: 2017/11/03 12:42:47 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:33:08 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_simple_del(void *content, size_t len)
 {

@@ -6,12 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 13:27:20 by enanrock          #+#    #+#             */
-/*   Updated: 2017/09/07 05:06:36 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:43:56 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char			*ft_uimaxtoa_base(uintmax_t n, int base)

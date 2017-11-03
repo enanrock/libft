@@ -6,12 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 17:20:52 by enanrock          #+#    #+#             */
-/*   Updated: 2017/07/10 18:07:20 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:43:38 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char			*ft_imaxtoa(intmax_t n)

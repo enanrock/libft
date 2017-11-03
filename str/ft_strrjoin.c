@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 15:51:26 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/19 12:46:41 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:41:56 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strrjoin(char *s1, char const *s2)

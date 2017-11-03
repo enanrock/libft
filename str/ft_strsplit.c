@@ -6,11 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 17:14:28 by enanrock          #+#    #+#             */
-/*   Updated: 2016/11/26 14:42:12 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:42:23 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static unsigned int	count_the_number_of_words_in_s(char const *s, char c)
@@ -40,7 +39,7 @@ static char			**main_part_cut_here(char ***result, char const **s, int c)
 
 	i_s = ft_strlen((char *)*s) - 1;
 	i_r = count_the_number_of_words_in_s(*s, c);
-	*result = (char **)malloc((i_r + 1) * sizeof(char *));
+	*result = (char **)ft_memalloc((i_r + 1) * sizeof(char *));
 	if (*result == NULL)
 		return (NULL);
 	(*result)[i_r] = NULL;

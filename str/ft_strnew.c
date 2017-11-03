@@ -6,12 +6,10 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 12:37:00 by enanrock          #+#    #+#             */
-/*   Updated: 2016/12/05 21:58:28 by enanrock         ###   ########.fr       */
+/*   Updated: 2017/11/03 13:41:15 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnew(size_t size)
@@ -19,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char	*result;
 	size_t	i;
 
-	result = (char *)malloc((size + 1) * sizeof(char));
+	result = (char *)ft_memalloc((size + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
 	i = 0;
