@@ -4,7 +4,7 @@ libft
 Subject
 -------
 
-An Ecole 42's projet : [libft](https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf) but i to change this rule `All those files must be at the root of your repository`, because i think it's better. `(ft = forty-two)`
+An Ecole 42's projet : [libft](https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf) but i change this rule `All those files must be at the root of your repository`, because i think it's better. `(ft = forty-two)`
 
 Norm
 ----
