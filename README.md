@@ -10,3 +10,32 @@ Norm
 ----
 
 This is the norm (the right way of writting codes) : https://cdn.intra.42.fr/pdf/pdf/1065/norme.en.pdf
+
+How to use Make
+-----------------
+
+if you type `Make where_is_malloc`, you have this useful messeage :
+```
+By the way, please use ft_memdel(&ap); instead of free(ap);
+
+1     : ft_memalloc.c      (result)
+
+1     : ft_strnew.c        (result)
+1     : ft_strdup.c        (result)
+1     : ft_strsub.c        (result)
+1     : ft_strjoin.c       (result)
+1     : ft_strnnjoin.c     (result)
+1     : ft_strtrim.c       (result)
+1     : ft_strmap.c        (result)
+1     : ft_strmapi.c       (result)
+1 + N : ft_strsplit.c      (result & result[i])
+
+1     : ft_itoa.c          (result)
+1     : ft_uitoa.c         (result)
+1     : ft_imawtoa.c       (result)
+1     : ft_uimawtoa_base.c (result)
+
+2     : ft_loopnew.c       (result & result->content)
+2     : ft_lstnew.c        (result & result->content)
+2     : ft_lstdupone.c     (use ft_lstnew.c)
+```
