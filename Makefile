@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/03 14:18:21 by enanrock         ###   ########.fr        #
+#    Updated: 2017/11/03 14:41:48 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -246,23 +246,25 @@ where_is_malloc:
 	clear
 	@echo "By the way, please use ft_memdel(&ap); instead of free(ap);"
 	@echo ""
-	@echo "1     : ft_memalloc.c      (result)"
+	@echo "number of      file            where is it"
+	@echo "allocation"
+	@echo "1         : ft_memalloc.c      (result)"
 	@echo ""
-	@echo "1     : ft_strnew.c        (result)"
-	@echo "1     : ft_strdup.c        (result)"
-	@echo "1     : ft_strsub.c        (result)"
-	@echo "1     : ft_strjoin.c       (result)"
-	@echo "1     : ft_strnnjoin.c     (result)"
-	@echo "1     : ft_strtrim.c       (result)"
-	@echo "1     : ft_strmap.c        (result)"
-	@echo "1     : ft_strmapi.c       (result)"
-	@echo "1 + N : ft_strsplit.c      (result & result[i])"
+	@echo "1         : ft_strnew.c        (result)"
+	@echo "1         : ft_strdup.c        (result)"
+	@echo "1         : ft_strsub.c        (result)"
+	@echo "1         : ft_strjoin.c       (result)"
+	@echo "1         : ft_strnnjoin.c     (result)"
+	@echo "1         : ft_strtrim.c       (result)"
+	@echo "1         : ft_strmap.c        (result)"
+	@echo "1         : ft_strmapi.c       (result)"
+	@echo "1 + N     : ft_strsplit.c      (result & result[i])"
 	@echo ""
-	@echo "1     : ft_itoa.c          (result)"
-	@echo "1     : ft_uitoa.c         (result)"
-	@echo "1     : ft_imawtoa.c       (result)"
-	@echo "1     : ft_uimawtoa_base.c (result)"
+	@echo "1         : ft_itoa.c          (result)"
+	@echo "1         : ft_uitoa.c         (result)"
+	@echo "1         : ft_imawtoa.c       (result)"
+	@echo "1         : ft_uimawtoa_base.c (result)"
 	@echo ""
-	@echo "2     : ft_loopnew.c       (result & result->content)"
-	@echo "2     : ft_lstnew.c        (result & result->content)"
-	@echo "2     : ft_lstdupone.c     (use ft_lstnew.c)"
+	@echo "2         : ft_loopnew.c       (result & result->content)"
+	@echo "2         : ft_lstnew.c        (result & result->content)"
+	@echo "2         : ft_lstdupone.c     (use ft_lstnew.c)"
