@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/03 13:26:05 by enanrock         ###   ########.fr        #
+#    Updated: 2017/11/03 13:55:21 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -230,10 +230,14 @@ re: fclean all
 
 norme:
 	@echo "\033[1;37m""norminette on ./libft/*.c"
-	@norminette $(SRC)                              \
+	@norminette $(SRC)                                   \
 		| sed ''s/Error/`echo "\033[0;31mError"`/g''     \
 		| sed ''s/Warning/`echo "\033[0;33mWarning"`/g'' \
 		| sed ''s/Norme/`echo "\033[1;32mNorme"`/g''
+	@norminette libft.h                                  \
+		| sed ''s/Error/`echo "\033[0;31mError"`/g''     \
+		| sed ''s/Warning/`echo "\033[0;33mWarning"`/g'' \
+		| sed ''s/Norme/`echo "\033[1;32;7mNorme"`/g''
 
 to_modif:
 	vim ./Makefile ./libft.h
