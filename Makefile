@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/03 14:41:48 by enanrock         ###   ########.fr        #
+#    Updated: 2017/11/11 04:35:41 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -238,6 +238,7 @@ norme:
 		| sed ''s/Error/`echo "\033[0;31mError"`/g''     \
 		| sed ''s/Warning/`echo "\033[0;33mWarning"`/g'' \
 		| sed ''s/Norme/`echo "\033[1;32;7mNorme"`/g''
+	@echo "\033[m""\c"
 
 to_modif:
 	vim ./Makefile ./libft.h
