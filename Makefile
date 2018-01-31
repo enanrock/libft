@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/01/31 17:00:50 by enanrock         ###   ########.fr        #
+#    Updated: 2018/01/31 17:16:57 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,52 +159,52 @@ $(NAME): libft.h $(DONE)
 $(OBJ_DIR)%.o: $(MEM_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(PUT_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(LIST_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(LOOP_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(CHAR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(TEST_STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(XTOY_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(MATH_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 $(OBJ_DIR)%.o: $(OTHER_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "-\c"
+	@echo "✔ \c"
 
 clean:
 	@echo "\033[31m""\c"
