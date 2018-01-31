@@ -4,7 +4,7 @@ Libft `(Library forty-two)`
 Subject
 -------
 
-An Ecole 42's projet : [libft](https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf) but i change this rule `All those files must be at the root of your repository`, because i think it's more confortable like this.
+An Ecole 42's projet : [libft](https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf) but i decide to ignore this rule : `All those files must be at the root of your repository`, because i think it's more confortable like this.
 
 Norm
 ----
@@ -14,7 +14,7 @@ This is the 42's norm (the right way of writting codes) : https://cdn.intra.42.f
 How to use Make
 ---------------
 
-You can type in your shell : `Make`, `Make clean`, `Make fclean`(= full clean) to compile the librabry
+You can type in your shell : `Make`, `Make clean`, `Make fclean`(= full clean) to compile the librabry on your shell. It use `gcc` to compile, and `ar rc` to create `libft.a`
 
 if you type `Make where_is_malloc`, you have this useful messeage :
 ```

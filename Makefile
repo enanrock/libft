@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/01/31 16:49:23 by enanrock         ###   ########.fr        #
+#    Updated: 2018/01/31 17:00:50 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,10 +78,7 @@ SRC   = $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC) $(LOOP_SRC) $(CHAR_SRC)   \
 DONE  = .mem_done .str_done .put_done .list_done .loop_done .char_done         \
 		.test_str_done  .xtoy_done .math_done .other_done
 
-CC = gcc
 CC_FLAGS = -Wall -Wextra -Werror -I./
-
-AR = ar rc
 
 .PHONY: all clean fclean re norme to_modif where_is_malloc
 
@@ -104,7 +101,7 @@ endif
 	@echo "\033[m"
 
 $(NAME): libft.h $(DONE)
-	@$(AR) $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 	@echo "\033[0;34m""created   : $(NAME)""\033[m"
 	@ranlib $(NAME)
 	@echo "\033[1;34m""sorted    : $(NAME)""\033[m"
@@ -161,52 +158,52 @@ $(NAME): libft.h $(DONE)
 
 $(OBJ_DIR)%.o: $(MEM_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(PUT_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(LIST_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(LOOP_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(CHAR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(TEST_STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(XTOY_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(MATH_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 $(OBJ_DIR)%.o: $(OTHER_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
-	@$(CC) $(CC_FLAGS) -o $@ -c $<
+	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "-\c"
 
 clean:
