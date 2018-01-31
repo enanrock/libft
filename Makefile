@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2017/11/11 04:35:41 by enanrock         ###   ########.fr        #
+#    Updated: 2018/01/31 16:49:23 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,8 +75,8 @@ OBJ   = $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ) $(LOOP_OBJ) $(CHAR_OBJ)   \
 		$(TEST_STR_OBJ) $(XTOY_OBJ) $(MATH_OBJ) $(OTHER_OBJ)
 SRC   = $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC) $(LOOP_SRC) $(CHAR_SRC)   \
 		$(TEST_STR_SRC) $(XTOY_SRC) $(MATH_SRC) $(OTHER_SRC)
-DONE  = mem_done str_done put_done list_done loop_done char_done test_str_done \
-		xtoy_done math_done other_done
+DONE  = .mem_done .str_done .put_done .list_done .loop_done .char_done         \
+		.test_str_done  .xtoy_done .math_done .other_done
 
 CC = gcc
 CC_FLAGS = -Wall -Wextra -Werror -I./
@@ -109,52 +109,52 @@ $(NAME): libft.h $(DONE)
 	@ranlib $(NAME)
 	@echo "\033[1;34m""sorted    : $(NAME)""\033[m"
 
-mem_done: $(MEM_OBJ)
+.mem_done: $(MEM_OBJ)
 	@echo "et" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : memory's objet(s)""\033[m"
 
-str_done: $(STR_OBJ)
+.str_done: $(STR_OBJ)
 	@echo "au" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : string's objet(s)""\033[m"
 
-put_done: $(PUT_OBJ)
+.put_done: $(PUT_OBJ)
 	@echo "chatons" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : put's objet(s)""\033[m"
 
-list_done: $(LIST_OBJ)
+.list_done: $(LIST_OBJ)
 	@echo "mange" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : list's objet(s)""\033[m"
 
-loop_done: $(LOOP_OBJ)
+.loop_done: $(LOOP_OBJ)
 	@echo "des" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : loop's objet(s)""\033[m"
 
-test_str_done: $(TEST_STR_OBJ)
+.test_str_done: $(TEST_STR_OBJ)
 	@echo "petit" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : test_string's objet(s)""\033[m"
 
-char_done: $(CHAR_OBJ)
+.char_done: $(CHAR_OBJ)
 	@echo "Zaz" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : char's objet(s)""\033[m"
 
-xtoy_done: $(XTOY_OBJ)
+.xtoy_done: $(XTOY_OBJ)
 	@echo "déjeuner" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : xtoy's objet(s)""\033[m"
 
-math_done: $(MATH_OBJ)
+.math_done: $(MATH_OBJ)
 	@echo "chats" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : math's objet(s)""\033[m"
 
-other_done: $(OTHER_OBJ)
+.other_done: $(OTHER_OBJ)
 	@echo "des" > $@
 	@echo ""
 	@echo "\033[0;33m""created   : other's objet(s)""\033[m"
