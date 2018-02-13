@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:12:44 by enanrock          #+#    #+#             */
-/*   Updated: 2018/02/13 14:58:45 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/02/13 16:54:46 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,14 @@ void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
 void				ft_putunbr(unsigned int n);
+void				ft_puthex(unsigned int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putlongchar_fd(int c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putunbr_fd(unsigned int n, int fd);
+void				ft_puthex_fd(unsigned int n, int fd);
 
 typedef	struct		s_list
 {

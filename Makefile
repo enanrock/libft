@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/01/31 17:22:21 by enanrock         ###   ########.fr        #
+#    Updated: 2018/02/13 16:53:59 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ STR   = strlen strset strdup strcpy strncpy strmove strcat strncat strlcat     \
 STR_SRC = $(addsuffix .c, $(addprefix $(STR_DIR)ft_, $(STR)))
 STR_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(STR)))
 
-PUT_TXT  = putchar putlongchar putstr putendl putnbr putunbr
+PUT_TXT  = putchar putlongchar putstr putendl putnbr putunbr puthex
 PUT_TXT_FD = $(addsuffix _fd, $(PUT_TXT))
 PUT_SRC = $(addsuffix .c, $(addprefix $(PUT_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
 PUT_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
