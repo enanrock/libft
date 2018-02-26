@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/26 16:24:03 by enanrock          #+#    #+#             */
-/*   Updated: 2018/02/26 16:43:44 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/02/26 16:55:07 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int		ft_a_power_b(int a, unsigned int b)
 	result = 1;
 	i = 0;
 	while (i < b)
+	{
 		result *= a;
+		i++;
+	}
 	return (result);
 }
