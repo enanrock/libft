@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/02/13 16:53:59 by enanrock         ###   ########.fr        #
+#    Updated: 2018/02/26 16:42:36 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ XTOY = itoa atoi uitoa atoui uimaxtoa_base imaxtoa
 XTOY_SRC = $(addsuffix .c, $(addprefix $(XTOY_DIR)ft_, $(XTOY)))
 XTOY_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(XTOY)))
 
-MATH = sqrt_uint
+MATH = sqrt_uint a_power_b
 MATH_SRC = $(addsuffix .c, $(addprefix $(MATH_DIR)ft_, $(MATH)))
 MATH_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MATH)))
 

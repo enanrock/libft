@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:12:44 by enanrock          #+#    #+#             */
-/*   Updated: 2018/02/13 16:54:46 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/02/26 16:43:19 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,7 @@ char				*ft_uimaxtoa_base(uintmax_t n, int base);
 char				*ft_imaxtoa(intmax_t n);
 
 unsigned int		ft_sqrt_uint(unsigned int ui);
+int					ft_a_power_b(int a, unsigned int b);
 
 void				ft_progress_bar(int current_state, int max);
 
