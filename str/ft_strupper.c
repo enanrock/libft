@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 17:28:05 by enanrock          #+#    #+#             */
-/*   Updated: 2017/07/13 17:30:55 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/03/09 12:28:17 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strupper(char *str)
 	size_t		i;
 
 	i = 0;
-	while (str[i] != 0)
+	while (str[i] != '\0')
 	{
 		str[i] = ft_toupper(str[i]);
 		i++;
