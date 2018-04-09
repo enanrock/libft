@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/14 14:26:26 by enanrock          #+#    #+#             */
-/*   Updated: 2017/10/14 14:29:00 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/04/08 00:42:31 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstdupone(t_list *elem)
 {
-	t_list	*result;
-
-	result = ft_lstnew(elem->content, elem->content_size);
-	return (result);
+	if (elem == NULL)
+		return (NULL);
+	else
+		return (ft_lstnew(elem->content, elem->content_size));
 }
