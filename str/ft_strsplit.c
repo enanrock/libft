@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 17:14:28 by enanrock          #+#    #+#             */
-/*   Updated: 2018/04/16 23:43:16 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/04/16 23:54:48 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char			**main_part_cut_here(char ***result, char const **s, int c)
 			i_s--;
 		}
 		(*result)[--i_r] = ft_strsub((*s), (unsigned int)(i_s + 1), l_word);
-		if ((*result)[--i_r] == NULL)
+		if ((*result)[i_r] == NULL)
 			panic(result, i_r + 1);
 	}
 	return (*result);
