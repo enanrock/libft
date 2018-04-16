@@ -6,7 +6,7 @@
 /*   By: enanrock <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:12:44 by enanrock          #+#    #+#             */
-/*   Updated: 2018/02/26 16:43:19 by enanrock         ###   ########.fr       */
+/*   Updated: 2018/04/16 23:01:02 by enanrock         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_strnchr(const char *s, int c, size_t len);
 char				*ft_strnnjoin(char const *s1, char const *s2,
 		size_t l1, size_t l2);
+void				ft_strdelsplit(char ***as);
 
 void				ft_putchar(char c);
 void				ft_putlongchar(int c);

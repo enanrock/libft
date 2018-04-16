@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/02/26 16:42:36 by enanrock         ###   ########.fr        #
+#    Updated: 2018/04/16 23:00:24 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ MEM_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MEM)))
 STR   = strlen strset strdup strcpy strncpy strmove strcat strncat strlcat     \
 		strchr strnchr strrchr strstr strnstr strcmp strncmp strequ strnequ    \
 		strnew strdel strclr striter striteri strmap strmapi strsub strjoin    \
-		strnnjoin strrjoin strtrim strsplit strupper strlower
+		strnnjoin strrjoin strtrim strsplit strupper strlower strdelsplit
 STR_SRC = $(addsuffix .c, $(addprefix $(STR_DIR)ft_, $(STR)))
 STR_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(STR)))
 
