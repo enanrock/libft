@@ -6,83 +6,95 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/04/16 23:00:24 by enanrock         ###   ########.fr        #
+#    Updated: 2018/04/26 22:34:18 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME			:= libft.a
 
-OBJ_DIR = ./objs/
+OBJ_DIR			:= ./objs/
 
-MEM_DIR = ./mem/
-STR_DIR = ./str/
-PUT_DIR = ./put/
-LIST_DIR = ./lst/
-LOOP_DIR = ./loop/
-MATH_DIR = ./math/
-CHAR_DIR = ./char/
-OTHER_DIR = ./other/
-XTOY_DIR = ./xtoy/
-TEST_STR_DIR = ./test_str/
+GNL_DIR			:= ./gnl/
+MEM_DIR			:= ./mem/
+STR_DIR			:= ./str/
+PUT_DIR			:= ./put/
+LIST_DIR		:= ./lst/
+LOOP_DIR		:= ./loop/
+MATH_DIR		:= ./math/
+CHAR_DIR		:= ./char/
+XTOY_DIR		:= ./xtoy/
+OTHER_DIR		:= ./other/
+TEST_STR_DIR	:= ./test_str/
 
-MEM   = bzero memset memcpy memccpy memmove memchr memcmp memalloc memdel      \
-		memswap simple_del
-MEM_SRC = $(addsuffix .c, $(addprefix $(MEM_DIR)ft_, $(MEM)))
-MEM_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MEM)))
+GNL				:= get_next_line
+GNL_SRC			:= $(addsuffix .c, $(addprefix $(GNL_DIR), $(GNL)))
+GNL_OBJ			:= $(addsuffix .o, $(addprefix $(OBJ_DIR), $(GNL)))
 
-STR   = strlen strset strdup strcpy strncpy strmove strcat strncat strlcat     \
-		strchr strnchr strrchr strstr strnstr strcmp strncmp strequ strnequ    \
-		strnew strdel strclr striter striteri strmap strmapi strsub strjoin    \
-		strnnjoin strrjoin strtrim strsplit strupper strlower strdelsplit
-STR_SRC = $(addsuffix .c, $(addprefix $(STR_DIR)ft_, $(STR)))
-STR_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(STR)))
+MEM				:= bzero memset memcpy memccpy memmove memchr memcmp memalloc  \
+	memdel memswap simple_del
+MEM_SRC			:= $(addsuffix .c, $(addprefix $(MEM_DIR)ft_, $(MEM)))
+MEM_OBJ			:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MEM)))
 
-PUT_TXT  = putchar putlongchar putstr putendl putnbr putunbr puthex
-PUT_TXT_FD = $(addsuffix _fd, $(PUT_TXT))
-PUT_SRC = $(addsuffix .c, $(addprefix $(PUT_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
-PUT_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
+STR				:= strlen strset strdup strcpy strncpy strmove strcat strncat  \
+	strlcat strchr strnchr strrchr strstr strnstr strcmp strncmp strequ strnequ\
+	strnew strdel strclr striter striteri strmap strmapi strsub strjoin        \
+	strnnjoin strrjoin strtrim strsplit strupper strlower strdelsplit
+STR_SRC			:= $(addsuffix .c, $(addprefix $(STR_DIR)ft_, $(STR)))
+STR_OBJ			:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(STR)))
 
-LIST  = lstnew lstadd lstaddend lstdelone lstdelhead lstdel lstdupone lstiter  \
-		lstmap
-LIST_SRC = $(addsuffix .c, $(addprefix $(LIST_DIR)ft_, $(LIST)))
-LIST_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(LIST)))
+PUT_TXT		:= putchar putlongchar putstr putendl putnbr putunbr puthex
+PUT_TXT_FD	:= $(addsuffix _fd, $(PUT_TXT))
+PUT_SRC	:= $(addsuffix .c, $(addprefix $(PUT_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
+PUT_OBJ	:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(PUT_TXT_FD) $(PUT_TXT)))
 
-LOOP  = loopnew loopadd loopdelhead loopdel
-LOOP_SRC = $(addsuffix .c, $(addprefix $(LOOP_DIR)ft_, $(LOOP)))
-LOOP_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(LOOP)))
+LIST		:= lstnew lstadd lstaddend lstdelone lstdelhead lstdel lstdupone   \
+	lstiter lstmap
+LIST_SRC		:= $(addsuffix .c, $(addprefix $(LIST_DIR)ft_, $(LIST)))
+LIST_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(LIST)))
 
-CHAR = isalpha isdigit isalnum isascii isprint toupper tolower
-CHAR_SRC = $(addsuffix .c, $(addprefix $(CHAR_DIR)ft_, $(CHAR)))
-CHAR_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(CHAR)))
+LOOP			:= loopnew loopadd loopdelhead loopdel
+LOOP_SRC		:= $(addsuffix .c, $(addprefix $(LOOP_DIR)ft_, $(LOOP)))
+LOOP_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(LOOP)))
 
-TEST_STR = is_str_int is_str_uint
-TEST_STR_SRC = $(addsuffix .c, $(addprefix $(TEST_STR_DIR)ft_, $(TEST_STR)))
-TEST_STR_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(TEST_STR)))
+MATH			:= sqrt_uint a_power_b
+MATH_SRC		:= $(addsuffix .c, $(addprefix $(MATH_DIR)ft_, $(MATH)))
+MATH_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MATH)))
 
-XTOY = itoa atoi uitoa atoui uimaxtoa_base imaxtoa
-XTOY_SRC = $(addsuffix .c, $(addprefix $(XTOY_DIR)ft_, $(XTOY)))
-XTOY_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(XTOY)))
+CHAR			:= isalpha isdigit isalnum isascii isprint toupper tolower
+CHAR_SRC		:= $(addsuffix .c, $(addprefix $(CHAR_DIR)ft_, $(CHAR)))
+CHAR_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(CHAR)))
 
-MATH = sqrt_uint a_power_b
-MATH_SRC = $(addsuffix .c, $(addprefix $(MATH_DIR)ft_, $(MATH)))
-MATH_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(MATH)))
+XTOY			:= itoa atoi uitoa atoui uimaxtoa_base imaxtoa
+XTOY_SRC		:= $(addsuffix .c, $(addprefix $(XTOY_DIR)ft_, $(XTOY)))
+XTOY_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(XTOY)))
 
-OTHER = progress_bar
-OTHER_SRC = $(addsuffix .c, $(addprefix $(OTHER_DIR)ft_, $(OTHER)))
-OTHER_OBJ = $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(OTHER)))
+OTHER			:= progress_bar
+OTHER_SRC		:= $(addsuffix .c, $(addprefix $(OTHER_DIR)ft_, $(OTHER)))
+OTHER_OBJ		:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(OTHER)))
 
-OBJ   = $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ) $(LOOP_OBJ) $(CHAR_OBJ)   \
-		$(TEST_STR_OBJ) $(XTOY_OBJ) $(MATH_OBJ) $(OTHER_OBJ)
-SRC   = $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC) $(LOOP_SRC) $(CHAR_SRC)   \
-		$(TEST_STR_SRC) $(XTOY_SRC) $(MATH_SRC) $(OTHER_SRC)
-DONE  = .mem_done .str_done .put_done .list_done .loop_done .char_done         \
-		.test_str_done  .xtoy_done .math_done .other_done
+TEST_STR		:= is_str_int is_str_uint
+TEST_STR_SRC	:= $(addsuffix .c, $(addprefix $(TEST_STR_DIR)ft_, $(TEST_STR)))
+TEST_STR_OBJ	:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(TEST_STR)))
 
-CC_FLAGS = -Wall -Wextra -Werror -I./
+SRC				:= $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC) $(LOOP_SRC)    \
+	$(CHAR_SRC) $(TEST_STR_SRC) $(XTOY_SRC) $(MATH_SRC) $(OTHER_SRC) $(GNL_SRC)
+OBJ				:= $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ) $(LOOP_OBJ)    \
+	$(CHAR_OBJ) $(TEST_STR_OBJ) $(XTOY_OBJ) $(MATH_OBJ) $(OTHER_OBJ) $(GNL_OBJ)
 
-.PHONY: all clean fclean re norme to_modif where_is_malloc
+DONE			:= .gnl_done .mem_done .str_done .put_done .list_done          \
+	.loop_done .char_done .test_str_done  .xtoy_done .math_done .other_done
+
+CC_FLAGS		:= -Wall -Wextra -Werror -I./ -I./$(GNL_DIR)
+
+.PHONY: all clean fclean re norme where_is_malloc
 
 all: author .gitignore $(NAME)
+
+EMOJI	:= \
+	🐦 🚀 🐞 🎨 🍕 🐭 👽 🔬 💀 🐷 🐼 🐶 🐸 🐧 🐳 🍔 🍣 🍻 🔮 💰 💎 💾 💜 🍪 🌞 🌍 🐌 🐓 🍄 ⚰ ☔ ☕ ☠ ⚔ ⚖ ⚗ ⚙  \
+	⚜ ⚡ ⚽ ✨ ☄ ☘ ☞ ♨ ⛄ ⛏ ⛑ ⛓ ⛩ ⛪ ⛱ ✏ ⭐ 🚃 🚄 🚒 🚧 🃏 🌙 🍌 🍪 🍰 🎁 🎩 🏩 🐍 👊 👑 👯 👻 👾 💢 💣  \
+	💥 📣 🔞 🔥 🔮 🔱 🚂 🚵 💶 🦄
+RAND	= $$RANDOM
 
 author:
 	@echo "\033[1;37m""\c"
@@ -105,6 +117,11 @@ $(NAME): libft.h $(DONE)
 	@echo "\033[0;34m""created   : $(NAME)""\033[m"
 	@ranlib $(NAME)
 	@echo "\033[1;34m""sorted    : $(NAME)""\033[m"
+
+.gnl_done: $(GNL_OBJ)
+	@echo "\033[7m" > $@
+	@echo ""
+	@echo "\033[0;33m""created   : gnl's objet(s)""\033[m"
 
 .mem_done: $(MEM_OBJ)
 	@echo "et" > $@
@@ -156,55 +173,71 @@ $(NAME): libft.h $(DONE)
 	@echo ""
 	@echo "\033[0;33m""created   : other's objet(s)""\033[m"
 
+$(OBJ_DIR)%.o: $(GNL_DIR)%.c $(GNL_DIR)/get_next_line.h
+	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
+	@gcc $(CC_FLAGS) -o $@ -c $<
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
+
 $(OBJ_DIR)%.o: $(MEM_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(PUT_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(LIST_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(LOOP_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(CHAR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(TEST_STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(XTOY_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(MATH_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(OTHER_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
-	@echo "\033[1;36m✔ \033[m\c"
+	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
+		| tr '\n' ' '
 
 clean:
 	@echo "\033[31m""\c"
@@ -236,9 +269,6 @@ norme:
 		| sed ''s/Warning/`echo "\033[0;33mWarning"`/g'' \
 		| sed ''s/Norme/`echo "\033[1;32;7mNorme"`/g''
 	@echo "\033[m""\c"
-
-to_modif:
-	vim ./Makefile ./libft.h
 
 where_is_malloc:
 	clear
