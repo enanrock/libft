@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/04/26 22:41:45 by enanrock         ###   ########.fr        #
+#    Updated: 2018/05/02 15:59:03 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -182,67 +182,67 @@ $(OBJ_DIR)%.o: $(GNL_DIR)%.c $(GNL_DIR)/get_next_line.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(MEM_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(PUT_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(LIST_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(LOOP_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(CHAR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(TEST_STR_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(XTOY_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(MATH_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 $(OBJ_DIR)%.o: $(OTHER_DIR)%.c libft.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
 	@gcc $(CC_FLAGS) -o $@ -c $<
 	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' '
+		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
 
 clean:
 	@echo "\033[31m""\c"
