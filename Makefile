@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/05/02 15:59:03 by enanrock         ###   ########.fr        #
+#    Updated: 2018/05/02 16:47:08 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,10 +76,10 @@ TEST_STR		:= is_str_int is_str_uint
 TEST_STR_SRC	:= $(addsuffix .c, $(addprefix $(TEST_STR_DIR)ft_, $(TEST_STR)))
 TEST_STR_OBJ	:= $(addsuffix .o, $(addprefix $(OBJ_DIR)ft_, $(TEST_STR)))
 
-SRC				:= $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC) $(LOOP_SRC)    \
-	$(CHAR_SRC) $(TEST_STR_SRC) $(XTOY_SRC) $(MATH_SRC) $(OTHER_SRC) $(GNL_SRC)
-OBJ				:= $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ) $(LOOP_OBJ)    \
-	$(CHAR_OBJ) $(TEST_STR_OBJ) $(XTOY_OBJ) $(MATH_OBJ) $(OTHER_OBJ) $(GNL_OBJ)
+SRC				:= $(GNL_SRCJ) $(MEM_SRC) $(STR_SRC) $(PUT_SRC) $(LIST_SRC)     \
+	$(LOOP_SRC) $(MATH_SRC) $(CHAR_SRC) $(XTOY_SRC) $(OTHER_SRC) $(TEST_STR_SRC)
+OBJ				:= $(GNL_OBJ) $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ)     \
+	$(LOOP_OBJ) $(MATH_OBJ) $(CHAR_OBJ) $(XTOY_OBJ) $(OTHER_OBJ) $(TEST_STR_OBJ)
 
 DONE			:= .gnl_done .mem_done .str_done .put_done .list_done          \
 	.loop_done .char_done .test_str_done  .xtoy_done .math_done .other_done
@@ -107,11 +107,11 @@ author:
 	@echo "\033[m"
 
 .gitignore:
-	@echo "\033[1;37m""\c"
-	echo "*.o" > .gitignore
-	echo "*.swp" >> .gitignore
-	echo "*_DONE" >> .gitignore
-	echo "$(NAME)" >> .gitignore
+	@echo "033[1;37m""\c"
+	echo "*.o"        >  .gitignore
+	echo "*.swp"      >> .gitignore
+	echo "*_DONE"     >> .gitignore
+	echo "$(NAME)"    >> .gitignore
 ifneq ($(OBJ_DIR), ./)
 	echo "$(OBJ_DIR)" >> .gitignore
 endif
@@ -119,64 +119,64 @@ endif
 
 $(NAME): libft.h $(DONE)
 	@ar rc $(NAME) $(OBJ)
-	@echo "\033[0;34m""created   : $(NAME)""\033[m"
+	@echo "created : ""\033[0;34m""$(NAME)""\033[m"
 	@ranlib $(NAME)
-	@echo "\033[1;34m""sorted    : $(NAME)""\033[m"
+	@echo "sorted  : ""\033[1;34m""$(NAME)""\033[m"
 
 .gnl_done: $(GNL_OBJ)
 	@echo "\033[7m" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : gnl's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""gnl's         objet(s)""\033[m"
 
 .mem_done: $(MEM_OBJ)
 	@echo "et" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : memory's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""memory's      objet(s)""\033[m"
 
 .str_done: $(STR_OBJ)
 	@echo "au" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : string's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""string's      objet(s)""\033[m"
 
 .put_done: $(PUT_OBJ)
 	@echo "chatons" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : put's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""put's         objet(s)""\033[m"
 
 .list_done: $(LIST_OBJ)
 	@echo "mange" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : list's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""list's        objet(s)""\033[m"
 
 .loop_done: $(LOOP_OBJ)
 	@echo "des" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : loop's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""loop's        objet(s)""\033[m"
 
 .test_str_done: $(TEST_STR_OBJ)
 	@echo "petit" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : test_string's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""test_string's objet(s)""\033[m"
 
 .char_done: $(CHAR_OBJ)
 	@echo "Zaz" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : char's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""char's        objet(s)""\033[m"
 
 .xtoy_done: $(XTOY_OBJ)
 	@echo "déjeuner" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : xtoy's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""xtoy's        objet(s)""\033[m"
 
 .math_done: $(MATH_OBJ)
 	@echo "chats" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : math's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""math's objet(s)""\033[m"
 
 .other_done: $(OTHER_OBJ)
 	@echo "des" > $@
 	@echo ""
-	@echo "\033[0;33m""created   : other's objet(s)""\033[m"
+	@echo "created : ""\033[0;33m""other's objet(s)""\033[m"
 
 $(OBJ_DIR)%.o: $(GNL_DIR)%.c $(GNL_DIR)/get_next_line.h
 	@mkdir -p $(OBJ_DIR) 2> /tmp/a.del
