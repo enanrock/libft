@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/05/10 17:36:10 by enanrock         ###   ########.fr        #
+#    Updated: 2018/05/26 23:27:05 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,6 @@ clean:
 	@echo "\033[0;31m""deleted all these files and directory :""\033[m"
 	@echo "\033[0;35m""\c"
 	@rm -fv $(OBJ_LIBFT) | column
-	@echo "\033[7m""\c"
-	@rm -fv $(DONE) | column
 	@echo "\033[0;35m""\c"
 	@rm -dv $(OBJ_DIR_LIBFT) | column
 

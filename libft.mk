@@ -6,7 +6,7 @@
 #    By: enanrock <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/19 09:17:32 by enanrock          #+#    #+#              #
-#    Updated: 2018/05/10 17:49:01 by enanrock         ###   ########.fr        #
+#    Updated: 2018/05/26 23:40:39 by enanrock         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,148 +88,146 @@ OBJ_LIBFT		:= $(GNL_OBJ) $(MEM_OBJ) $(STR_OBJ) $(PUT_OBJ) $(LIST_OBJ)     \
 
 OBJS			+= $(OBJ_LIBFT)
 
-DONE			:= .gnl_done .mem_done .str_done .put_done .list_done          \
-	.loop_done .char_done .test_str_done  .xtoy_done .math_done .other_done
-
 CC_FLAGS_LIBFT		:= -Wall -Wextra -Werror                                   \
 	-I$(HERE_LIBFT) -I$(addprefix $(HERE_LIBFT), $(GNL_DIR))
 
 HDRS_DIR			+= $(HERE_LIBFT)libft.h
 
-EMOJI	:= 🐦 🚀 🐞 🎨 \
-	🍕 🐭 👽 🔬 💀 🐷 🐼 🐶 🐸 🐧 \
-	🐳 🍔 🍣 🍻 🔮 💰 💎 💾 💜 🍪 \
-	🌞 🌍 🐌 🐓 🍄 ⚰ ☔ ☕ ☠ ⚔ \
-	⚖ ⚗ ⚙ ⚜ ⚡ ⚽ ✨ ☄ ☘ ☞ \
-	♨ ⛄ ⛏ ⛑ ⛓ ⛩ ⛪ ⛱ ✏ ⭐ \
-	🚃 🚄 🚒 🚧 🃏 🌙 🍌 🍪 🍰 🎁 \
-	🎩 🏩 🐍 👊 👑 👯 👻 👾 💢 💣 \
-	💥 📣 🔞 🔥 🔮 🔱 🚂 🚵 💶 🦄
-RAND	= $$RANDOM
+PRO_LIBFT	:=
 
-$(NAME_LIBFT): $(addpreffix $(HERE_LIBFT) libft.h) $(DONE)
+$(NAME_LIBFT): $(addpreffix $(HERE_LIBFT) libft.h) $(OBJ_LIBFT)
 	@ar rc $(NAME_LIBFT) $(OBJ_LIBFT)
-	@echo "created : ""\033[0;34m""$(NAME_LIBFT)""\033[m"
 	@ranlib $(NAME_LIBFT)
-	@echo "sorted  : ""\033[1;34m""$(NAME_LIBFT)""\033[m"
-
-.gnl_done: $(GNL_OBJ)
-	@echo "\033[7m" > $@
 	@echo ""
-	@echo "created : ""\033[0;33m""gnl's         objet(s)""\033[m"
-
-.mem_done: $(MEM_OBJ)
-	@echo "et" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""memory's      objet(s)""\033[m"
-
-.str_done: $(STR_OBJ)
-	@echo "au" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""string's      objet(s)""\033[m"
-
-.put_done: $(PUT_OBJ)
-	@echo "chatons" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""put's         objet(s)""\033[m"
-
-.list_done: $(LIST_OBJ)
-	@echo "mange" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""list's        objet(s)""\033[m"
-
-.loop_done: $(LOOP_OBJ)
-	@echo "des" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""loop's        objet(s)""\033[m"
-
-.test_str_done: $(TEST_STR_OBJ)
-	@echo "petit" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""test_string's objet(s)""\033[m"
-
-.char_done: $(CHAR_OBJ)
-	@echo "Zaz" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""char's        objet(s)""\033[m"
-
-.xtoy_done: $(XTOY_OBJ)
-	@echo "déjeuner" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""xtoy's        objet(s)""\033[m"
-
-.math_done: $(MATH_OBJ)
-	@echo "chats" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""math's objet(s)""\033[m"
-
-.other_done: $(OTHER_OBJ)
-	@echo "des" > $@
-	@echo ""
-	@echo "created : ""\033[0;33m""other's objet(s)""\033[m"
 
 $(OBJ_DIR_LIBFT)%.o: $(GNL_DIR)%.c $(GNL_DIR)/get_next_line.h
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(MEM_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(STR_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(PUT_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(LIST_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(LOOP_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(CHAR_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(TEST_STR_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(XTOY_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(MATH_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
 
 $(OBJ_DIR_LIBFT)%.o: $(OTHER_DIR)%.c $(addpreffix $(HERE_LIBFT) libft.h)
 	@mkdir -p $(OBJ_DIR_LIBFT) 2> /tmp/a.del
 	@gcc $(CC_FLAGS_LIBFT) -o $@ -c $<
-	@echo "$(EMOJI)" | cut -f $(shell echo $(RAND) % 84 + 1 | bc) -d ' '       \
-		| tr '\n' ' ' | sed 's/%/%/g' | tr '\n' ' '
+	$(eval PRO_LIBFT += $@)
+	@printf "\r\033[2K%-20s : %3d%%" $(NAME_LIBFT) \
+		$$(( 100 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) ))
+	@printf " [\033[1;30m"
+	@printf 'O%.0s' {1..50}
+	@printf "\033[m]"
+	@printf '\b%.0s' {1..51}
+	@printf '%0*c' $$(( 50 * $(words $(PRO_LIBFT)) / $(words $(OBJ_LIBFT)) )) 0
